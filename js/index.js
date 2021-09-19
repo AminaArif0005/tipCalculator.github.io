@@ -59,7 +59,6 @@ function readCustomPer(){
     perTile.addEventListener("keyup" , () => {
     const customPer =  parseInt(perTile.value);
     
-    console.log("custom Perrcentage" , customPer);
     if(customPer === 0){
         console.log("bill cannot be zero");
     } 
@@ -84,14 +83,14 @@ function addInputField(){
     customTile.innerHTML = "   <input type='number' name='customPercenatageTile' id='customPercenatageTile' min = '0' value = '0'>";
     customTile.removeEventListener("click",addInputField);
     readCustomPer()
- 
+    
 }
 
 
 //selecting the custom percenatge tile
   
 const customTile = document.querySelector(".tip-selection-c__tip-percentage span:last-child");
- customTile.addEventListener("click" , addInputField);
+customTile.addEventListener("click" , addInputField);
 
 
 
@@ -136,6 +135,13 @@ billInputField.addEventListener("keyup" , () => {
 
 })
 
+
+billInputField.addEventListener("input" , () => {
+    resetBtn.addEventListener("click" , resetFun);
+
+})
+
+
 // select number of person input field
 let numberOfPersons = document.getElementById("numberOfPersons");
 
@@ -174,14 +180,22 @@ numberOfPersons.addEventListener("keyup" , () => {
 
 })
 
+function resetFun(){
 
-
-const resetBtn = document.querySelector(".show-billing-component-c__reset-btn");
-resetBtn.addEventListener("click" , () => {
     obj = new TipCalculator();
     billInputField.value = 0;
     numberOfPersons.value = 0;
     obj.showAmount();
-    document.querySelector(".selected-tile").classList.remove("selected-tile");
+    const selectedTile = document.querySelector(".selected-tile");
+    if(selectedTile){
+        selectedTile.classList.remove("selected-tile");
+    }
+    console.log("reset-btn is pushed");
+}
+
+const resetBtn = document.querySelector(".show-billing-component-c__reset-btn");
+
+numberOfPersons.addEventListener("input" , () => {
+    resetBtn.addEventListener("click" , resetFun);
 
 })

@@ -1,1 +1,0 @@
-# tipCalculator.github.io
