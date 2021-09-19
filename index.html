@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="https://kit.fontawesome.com/98a4a28eaf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="wrapper">
+  <header class = "top">
+     <h1>
+             SPLI
+       <span>TTER</span>
+    </h1>
+  </header>
+
+  <main class = "wrapper__main-content">
+
+   
+    <div class="main-content__calculate-bill-c">
+      
+      <div class="calculate-bill-c__input-bill-c">
+
+        <div>
+        <h2>Bill</h2>
+        <div class="errorMessage--red errorMessage-bill"></div>
+        </div>
+        <div class="input-field billInputField">
+
+          <i class="fas fa-dollar-sign"></i>
+          <input type="number" name="billAmount" id="billInputField" min = "0" value = "0">
+
+        </div>
+        
+      </div>
+      <div class="calculate-bill-c__tip-selection-c">
+        
+        <h2>Select Tip %</h2>
+        <div class="tip-selection-c__tip-percentage">
+          <span data-percentage = "5">5%</span>
+          <span data-percentage  = "10">10%</span>
+          <span data-percentage = "15">15%</span>
+          <span data-percentage = "25">25%</span>
+          <span data-percentage = "55">55%</span>
+          <span>Custom</span>
+        </div>
+
+    </div>
+    
+     <div class="calculate-bill-c__input-number-of-people-c">
+
+
+       <div>
+       <h2>Number of People</h2>
+       <div class="errorMessage--red errorMessage--noOfPerson"></div>
+      </div>
+       <div class="input-field noOfPerInputField">
+
+        <i class="fas fa-user"></i>
+        <input type="number" name="numberOfPersons"  min = "0" id = "numberOfPersons" value = "0">
+
+      </div>
+     </div>
+    </div>
+  
+    <div class="main-content_show-billing-amount-c">
+
+      <div class="show-billing-amount-c__wrapper">
+        <div class = "show-billing-amount-c__amount-per-person">
+
+          <div>
+            <h2>Tip Amount</h2>
+            <span>/ person</span>
+          </div>
+
+          <span class = "show-billing-amount-c__total-amount" id = "tipPerPerson">0</span>
+        </div>
+  
+          <div class = "show-billing-amount-c__amount-per-person">
+
+             <div>
+            <h2>Total</h2>
+            <span>/ person</span>
+            </div>
+            
+            <span class="show-billing-amount-c__total-amount" id = "billPerPerson">0</span>
+          </div>
+        
+      </div>
+    
+      <div class="show-billing-component-c__reset-btn">
+        <a href="#">Reset</a>
+      </div>
+      
+    </div>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Amina Arif</a>.
+  </div>
+
+</div>
+  
+  <script src="./js/index.js" type = "module"></script>
+  </body>
+</html>

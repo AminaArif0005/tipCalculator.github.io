@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* CSS for input fields */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.input-field{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    background-color: hsl(189, 41%, 97%);
+    /* cursor: pointer; */
+    border-radius: 5px;
+}
+
+.input-field:hover{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.input-field input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    height: 100%;
+    text-align: right;
+    background-color: transparent;
+    color: inherit;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+}
+
+
+
+.input-field i{
+    margin-left: 10px;
+    font-size: 13px;
+    color:   hsl(184, 14%, 56%);
+}
+
+#customPercenatageTile{
+
+    padding: 3%;
+    width: 90%;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+    border: none;
+    outline: none;
+
+}
+
+.invalidInput{
+    border: 2px solid rgb(248, 33, 33) !important; 
+    
+}
+
+.errorMessage--red{
+    color: rgb(206, 0, 0);
+}
+/* CSS for top section/heading */
+.top{
+    text-align: center;
+    padding: 5% 0;
+    color: 	rgba(0, 73, 77,0.7);
+    font-size: 0.85rem;
+    letter-spacing: 5px;
+}
+
+.top span{
+    display: block;
+}
+
+
+
+/* CSS for main content */
+.wrapper__main-content{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+    padding: 4%;
+    background-color: hsl(0, 0%, 100%);
+    font-size: 0.65rem;
+    color: hsl(186, 14%, 43%);
+    border-radius: 10px;
+}
+
+.calculate-bill-c__input-bill-c{
+    width: 100%;
+}
+
+.calculate-bill-c__tip-selection-c{
+
+    margin: 10% 0;
+
+}
+
+
+.tip-selection-c__tip-percentage{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+
+}
+
+.tip-selection-c__tip-percentage span{
+    padding: 3%;
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    color: hsl(189, 41%, 97%);
+    cursor: pointer;
+}
+
+.tip-selection-c__tip-percentage span:hover{
+    color: hsl(183, 100%, 15%);
+    background-color: 	rgba(38, 192, 171,0.5);
+}
+
+.tip-selection-c__tip-percentage span:last-child{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+}
+
+.selected-tile {
+   background-color: hsl(172, 48%, 53%) !important;
+   color: hsl(183, 100%, 15%) !important;
+}
+
+.main-content_show-billing-amount-c{
+    background-color: hsl(183, 100%, 15%);
+    padding: 10%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-billing-amount-c__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.show-billing-amount-c__amount-per-person{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.show-billing-amount-c__amount-per-person  div{
+    flex-grow: 1;
+}
+
+.show-billing-amount-c__amount-per-person  div  h2{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.9rem;
+}
+
+.show-billing-amount-c__total-amount{
+    font-size: 2.3rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.calculate-bill-c__input-bill-c div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.calculate-bill-c__input-bill-c div:first-child h2{
+   flex-grow: 1;
+}
+
+.calculate-bill-c__input-number-of-people-c div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.calculate-bill-c__input-number-of-people-c div:first-child h2{
+    flex-grow: 1;
+}
+
+
+.show-billing-component-c__reset-btn{
+    padding: 3%;
+    background-color: hsl(172, 67%, 45%);;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.show-billing-component-c__reset-btn:hover{
+    background-color:hsl(172, 67%, 70%)
+    ;
+}
+
+
+.show-billing-component-c__reset-btn a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .wrapper{
+        width: 100vw;
+       
+
+    }
+  
+  }
+
+  @media only screen and (max-width: 650px) {
+
+    .wrapper{
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .wrapper__main-content{
+
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+        font-size: 0.65rem !important;
+        padding: 10%;
+  }
+
+
+  }
+@media only screen and (max-width: 480px) {
+
+    .wrapper{
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .top{
+        padding: 8% 0;
+    }
+    .wrapper__main-content{
+
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+        font-size: 0.65rem !important;
+        padding: 10%;
+    }
+    
+    .input-field input{
+        font-size: 0.7rem;
+    }
+    
+    
+
+    .tip-selection-c__tip-percentage{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        margin-top: 5px;
+    
+    }
+    
+    .calculate-bill-c__tip-selection-c{
+    
+        margin: 10% 0;
+        /* width: 80%; */
+    
+    }
+
+    .show-billing-amount-c__amount-per-person  div  h2{
+        font-size: 0.8rem;
+    }
+  }
+
